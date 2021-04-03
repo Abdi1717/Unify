@@ -66,7 +66,7 @@ class MusicCommunityTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
        
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell2")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2")!
         
         if let label = cell.viewWithTag(11) as?  UILabel { label.text = "22"}
           
@@ -91,7 +91,7 @@ class MusicCommunityTableViewController: UITableViewController {
   
   
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 250.0
     }
     
     

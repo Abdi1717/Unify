@@ -10,7 +10,7 @@ import UIKit
 
 struct Community {
     let  user: String
-    let  likes: Int
+    var  likes: Int
     
 }
 
@@ -66,9 +66,13 @@ class MusicCommunityTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2") as! CustomTableViewCell
+        cell.HeartButtonMusicCommunity.tag = indexPath.row
+     
+        cell.HeartButtonMusicCommunity.addTarget(self, action: #selector(self.heartCount(_:)), for: .touchUpInside)
+        cell.heartCountMusicCommunity.text = "\(communityList[indexPath.row].likes)"
         
-        if let label = cell.viewWithTag(11) as?  UILabel { label.text = "22"}
+        //if let label = cell.viewWithTag(11) as?  UILabel { label.text = "22"}
           
         if let label = cell.viewWithTag(12) as?  UILabel { label.text = "33"}
         
@@ -87,7 +91,16 @@ class MusicCommunityTableViewController: UITableViewController {
       //self.tableView.reloadData()
         return (cell)
     }
- 
+    
+    @objc func heartCount(_ sender: UIButton) {
+
+        let rowIndex: Int = sender.tag
+        print("Before: \(communityList[rowIndex].likes)")
+        communityList[rowIndex].likes = communityList[rowIndex].likes + 1
+        self.tableView.reloadData()
+        print("\nAfter: \(communityList[rowIndex].likes)")
+        communityList.sort( by: {$0.likes > $1.likes })
+        }
   
   
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

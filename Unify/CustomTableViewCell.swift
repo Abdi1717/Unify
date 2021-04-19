@@ -16,5 +16,9 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var likability: UILabel!
     
     
+   
+    @IBOutlet weak var HeartButtonMusicCommunity: UIButton!
+    @IBOutlet weak var heartCountMusicCommunity: UILabel!
+    @IBOutlet weak var ChatButtonMusicCommunity: UIButton!
     
 }

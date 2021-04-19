@@ -13,11 +13,14 @@ struct Song {
     var  downVotes: Int
 }
 
-class MusicTableViewController: UITableViewController {
+class MusicTableViewController: UITableViewController, UISearchBarDelegate{
     /*let endpoint = "https://www.rijksmuseum.nl/api/nl/collection?key=dU10s0eb&involvedMaker=Rembrandt+van+Rijn&p=1-99&ps=1-30"
       */
     
     var songRankings = [Song]()
+    var filteredResults = [String]()
+    var searching = false
+    
 
       
     @IBOutlet weak var upVotes: UIButton!
@@ -31,6 +34,12 @@ class MusicTableViewController: UITableViewController {
     
       override func viewDidLoad() {
           super.viewDidLoad()
+          self.tableView.delegate = self
+        self.tableView.dataSource = self
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        searchBar.placeholder = "Search for song"
+        self.navigationItem.titleView = searchBar
         
         songRankings.append(Song(songName: "Old Time Road", upVotes: 34, downVotes: 2))
         songRankings.append(Song(songName: "Self Care", upVotes: 30, downVotes: 4))
@@ -59,7 +68,32 @@ class MusicTableViewController: UITableViewController {
          
       }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        var currentResults = [String]()
+        for songName in songRankings {
+            
+            if songName.songName.contains(searchBar.text!){
+                currentResults.append(songName.songName)
+            }
+        }
+        filteredResults = currentResults
+        searching = true
+        self.tableView.reloadData()
+    }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            self.searching = false
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text == "" {
+            self.searching = false
+            self.tableView.reloadData()
+        }
+    }
     
    
       

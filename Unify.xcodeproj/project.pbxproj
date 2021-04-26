@@ -10,6 +10,11 @@
 		B54256BA2618433F00EF9CB1 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54256B92618433F00EF9CB1 /* VideoPlayer.swift */; };
 		B54256BF261843CB00EF9CB1 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54256BE261843CB00EF9CB1 /* PlayerView.swift */; };
 		B54256C42618761500EF9CB1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54256C32618761500EF9CB1 /* CustomTableViewCell.swift */; };
+		B5691ED126346AD600A14333 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5691ED026346AD600A14333 /* ExploreTableViewController.swift */; };
+		B5691ED626346AF200A14333 /* ExploreDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5691ED526346AF200A14333 /* ExploreDetailsTableViewController.swift */; };
+		B5691EDB26346B2300A14333 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5691EDA26346B2300A14333 /* MapTableViewController.swift */; };
+		B5691EE32636223600A14333 /* AddEventTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5691EE22636223600A14333 /* AddEventTableView.swift */; };
+		B5691EE82636237800A14333 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5691EE72636237800A14333 /* Event.swift */; };
 		B56AB8C8262D5B0300192082 /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AB8C7262D5B0300192082 /* HomePageTableViewController.swift */; };
 		B56AB8CD262D629400192082 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AB8CC262D629400192082 /* CustomTabBarController.swift */; };
 		B5E8D33C26180D6400348E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8D33B26180D6400348E34 /* AppDelegate.swift */; };
@@ -44,6 +49,11 @@
 		B54256B92618433F00EF9CB1 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		B54256BE261843CB00EF9CB1 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		B54256C32618761500EF9CB1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		B5691ED026346AD600A14333 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
+		B5691ED526346AF200A14333 /* ExploreDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailsTableViewController.swift; sourceTree = "<group>"; };
+		B5691EDA26346B2300A14333 /* MapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
+		B5691EE22636223600A14333 /* AddEventTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableView.swift; sourceTree = "<group>"; };
+		B5691EE72636237800A14333 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B56AB8C7262D5B0300192082 /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
 		B56AB8CC262D629400192082 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		B5E8D33826180D6400348E34 /* Unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +124,11 @@
 				B5E8D33B26180D6400348E34 /* AppDelegate.swift */,
 				B5E8D33D26180D6400348E34 /* SceneDelegate.swift */,
 				B5E8D34126180D6400348E34 /* Main.storyboard */,
+				B5691EE22636223600A14333 /* AddEventTableView.swift */,
+				B5691EDA26346B2300A14333 /* MapTableViewController.swift */,
+				B5691ED026346AD600A14333 /* ExploreTableViewController.swift */,
+				B5691EE72636237800A14333 /* Event.swift */,
+				B5691ED526346AF200A14333 /* ExploreDetailsTableViewController.swift */,
 				B56AB8CC262D629400192082 /* CustomTabBarController.swift */,
 				B54256B92618433F00EF9CB1 /* VideoPlayer.swift */,
 				B54256BE261843CB00EF9CB1 /* PlayerView.swift */,
@@ -276,14 +291,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5691ED126346AD600A14333 /* ExploreTableViewController.swift in Sources */,
 				B5E8D37226180FE800348E34 /* MusicTableViewController.swift in Sources */,
 				B54256BA2618433F00EF9CB1 /* VideoPlayer.swift in Sources */,
+				B5691EE32636223600A14333 /* AddEventTableView.swift in Sources */,
 				B5E8D3772618125F00348E34 /* MusicCommunityTableView.swift in Sources */,
 				B56AB8C8262D5B0300192082 /* HomePageTableViewController.swift in Sources */,
 				B54256C42618761500EF9CB1 /* CustomTableViewCell.swift in Sources */,
 				B54256BF261843CB00EF9CB1 /* PlayerView.swift in Sources */,
+				B5691ED626346AF200A14333 /* ExploreDetailsTableViewController.swift in Sources */,
+				B5691EDB26346B2300A14333 /* MapTableViewController.swift in Sources */,
 				B5E8D33C26180D6400348E34 /* AppDelegate.swift in Sources */,
 				B5E8D33E26180D6400348E34 /* SceneDelegate.swift in Sources */,
+				B5691EE82636237800A14333 /* Event.swift in Sources */,
 				B56AB8CD262D629400192082 /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
